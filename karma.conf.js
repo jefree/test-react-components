@@ -33,7 +33,7 @@ module.exports = function(config) {
       debug: true,
       configure: function browserify(bundle) {
         bundle.once('prebundle', function prebundle() {
-          bundle.transform('babelify', {presets: ['es2015', 'react']});
+          bundle.transform('babelify', {presets: ['es2015', 'react', 'stage-0']});
         });
         bundle.on('prebundle', function() {
           bundle.external('react/addons');
